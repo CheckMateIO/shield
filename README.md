@@ -40,7 +40,7 @@ Shield will store environment variables as a hash of values based on your enviro
 `shield fetch`
 
 #### Environment Flag
-By default, all commands use the "development" environment.  You can specify another enviroment with the `--environment` flag.
+By default, all commands use the "development" environment.  You can specify another environment with the `--environment` flag.
 
 `shield fetch --environment=production` will fetch your production environment variables and update your `.env.production` file.
 
