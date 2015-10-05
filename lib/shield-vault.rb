@@ -1,8 +1,8 @@
-require "shield/version"
+require "shield-vault/version"
 require "thor"
 require 'vault'
 
-module Shield
+module ShieldVault
   class Commander < Thor
     class_option :app, desc: "specify which app this is for, default is current working directory"
     class_option :environment, desc: "specify which environment this is for", default: "development"

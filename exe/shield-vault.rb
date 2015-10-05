@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require 'shield'
+require 'shield-vault'
 require 'vault'
 
 # Vault config
@@ -12,4 +12,4 @@ Vault.configure do |config|
   config.token = ENV['VAULT_TOKEN'] || "abcd-1234"
 end
 
-Shield::Commander.start(ARGV)
+ShieldVault::Commander.start(ARGV)

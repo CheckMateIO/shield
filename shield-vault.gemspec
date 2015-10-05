@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'shield/version'
+require 'shield-vault/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "shield"
-  spec.version       = Shield::VERSION
+  spec.name          = "shield-vault"
+  spec.version       = ShieldVault::VERSION
   spec.authors       = ["Adam Scott"]
   spec.email         = ["ascot21@gmail.com"]
 
   spec.summary       = %q{A tool for managing your application's environment variables in a Vault.}
   spec.description   = %q{A tool for managing your application's environment variables in a Vault.}
-  spec.homepage      = "https://github.com/CheckMateIO/shield"
+  spec.homepage      = "https://github.com/CheckMateIO/shield-vault"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or

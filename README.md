@@ -1,13 +1,13 @@
-# Shield
+# Shield-Vault
 
-Shield is a tool for managing your application's environment variables in a [Vault](https://vaultproject.io/).
+Shield-Vault is a tool for managing your application's environment variables in a [Vault](https://vaultproject.io/).
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'shield'
+gem 'shield-vault'
 ```
 
 And then execute:
@@ -25,32 +25,32 @@ This gem assumes that you've already setup [Vault](https://vaultproject.io/).  Y
 2. `export VAULT_TOKEN=YOUR_VAULT_AUTH_TOKEN`
 
 ## Usage
-Shield will store environment variables as a hash of values based on your environment and the name of your app.  By default the environment is "development" but can be overriden with the `--environment` flag.  The name of your app is taken from your current working directory or by specifying it with the `--app` flag.
+Shield-Vault will store environment variables as a hash of values based on your environment and the name of your app.  By default the environment is "development" but can be overriden with the `--environment` flag.  The name of your app is taken from your current working directory or by specifying it with the `--app` flag.
 
 #### Add an environment variable
-`shield add <key> <value>`
+`shield-vault add <key> <value>`
 
 #### Update an environment variable
-`shield update <key> <value>`
+`shield-vault update <key> <value>`
 
 #### Remove an environment variable
-`shield remove <key> <value>`
+`shield-vault remove <key> <value>`
 
 #### Fetch all environment variables and update your .env file
-`shield fetch`
+`shield-vault fetch`
 
 #### Environment Flag
 By default, all commands use the "development" environment.  You can specify another environment with the `--environment` flag.
 
-`shield fetch --environment=production` will fetch your production environment variables and update your `.env.production` file.
+`shield-vault fetch --environment=production` will fetch your production environment variables and update your `.env.production` file.
 
 #### App flag
 By default, all commands use your current working directory as the app name.  If for some reason you need to override this, you can do so with the `--app` flag.
 
-`shield fetch --app=seabiscuit` will fetch the environment variables namespaced under the seabiscuit app.
+`shield-vault fetch --app=seabiscuit` will fetch the environment variables namespaced under the seabiscuit app.
 
 #### .env files
-Shield assumes you are using a tool like [dotenv](https://github.com/bkeepers/dotenv) or [Ember-cli-dotenv](https://github.com/fivetanley/ember-cli-dotenv) to load environment variables in your app as the `fetch` command will create/update the appropriate .env file.  For example, if pass the `--environment=production` flag, it'll update the `.env.production` file.
+Shield-Vault assumes you are using a tool like [dotenv](https://github.com/bkeepers/dotenv) or [Ember-cli-dotenv](https://github.com/fivetanley/ember-cli-dotenv) to load environment variables in your app as the `fetch` command will create/update the appropriate .env file.  For example, if pass the `--environment=production` flag, it'll update the `.env.production` file.
 
 ## Development
 
@@ -60,7 +60,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/shield.
+Bug reports and pull requests are welcome on GitHub at https://github.com/checkmateio/shield-vault.
 
 
 ## License
